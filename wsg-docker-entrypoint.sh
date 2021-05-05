@@ -11,8 +11,7 @@ mkdir gnuboard \
 && chown -R www-data:www-data ./ \
 && chmod -R 777 data \
 && sed -i "s/'utf8'/'utf8mb4'/g" config.php \
-&& cd .. \
-&& echo >&2 "Complete! gnuboard has been successfully copied to $PWD"
+&& cd ..
 fi
 # 그누보드 자동설치 스크립트 끝
 

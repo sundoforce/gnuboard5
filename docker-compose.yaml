@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  php:
+    image: php:8.0-fpm-alpine
+    restart: unless-stopped
+    volumes:
+      - ./var_www_html:/var/www
+  nginx:
+    image: nginx:latest
+    restart: unless-stopped
+  ports:
+    - "80:80"
+  volumes:
+    - ./nginx:/etc/nginx
+    - ./var_www_html:/var/www/html

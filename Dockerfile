@@ -1,8 +1,8 @@
 FROM woosungchoi/fpm-alpine:latest
 
-VOLUME /var/www
+VOLUME /var/www/web
 
-WORKDIR /var/www
+WORKDIR /var/www/web
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
